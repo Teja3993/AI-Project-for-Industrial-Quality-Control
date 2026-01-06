@@ -57,3 +57,34 @@ The dataset is **not uploaded to this GitHub repository** to comply with Kaggle�
 ```bash
 pip install numpy pandas matplotlib scikit-learn tensorflow
 jupyter notebook
+
+Then open:
+
+dl-project-ind.ipynb
+
+
+📈 Results
+
+The notebook includes training results, evaluation metrics, and observations.
+
+Model performance and conclusions are discussed within the notebook itself.
+
+🚀 Future Improvements
+
+Hyperparameter tuning
+
+Model optimization
+
+Cross-validation
+
+Deployment as a web application
+
+👤 Author
+
+Teja Karri
+
+If you find this project useful, feel free to ⭐ star the repository.
+
+📄 License
+
+This project is for educational and learning purposes.
