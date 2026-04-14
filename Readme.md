@@ -1,90 +1,29 @@
-# Deep Learning Project (Kaggle Notebook)
+# 🏭 Industrial Quality Control: Computer Vision & Anomaly Detection
 
-## 📌 Project Overview
-This repository contains a **Deep Learning project implemented using a Kaggle Notebook**.  
-The notebook covers data loading, preprocessing, model building, training, and evaluation using Python-based deep learning libraries.
+An end-to-end computer vision pipeline designed for automated defect detection on manufacturing surfaces. This project moves beyond standard classification by benchmarking classical machine learning against deep learning and introducing an unsupervised anomaly detection engine for zero-shot defect identification.
 
-The project is intended for:
-- Learning and practicing Deep Learning concepts
-- Experimenting with neural networks on real-world datasets
-- Showcasing practical ML/DL work on GitHub
+## 🚀 Business Case & Impact
+In manufacturing, manual visual inspection is slow and error-prone. This project automates quality assurance by identifying surface defects (crazing, inclusions, patches, pitted surfaces, rolled-in scale, scratches) in real-time. 
 
----
+Crucially, this project includes a **Trade-off Analysis (Accuracy vs. Inference Speed)** to determine the most viable model for deployment on hardware-constrained factory edge devices.
+
+### Key Technical Achievements:
+* **Transfer Learning**: Fine-tuned **MobileNetV2** for feature extraction, achieving **93.89% accuracy** on multi-class defect categorization.
+* **Unsupervised Anomaly Detection**: Engineered a **Convolutional Autoencoder** to identify novel defects (Zero-Shot Detection) using Mean Squared Error (MSE) reconstruction thresholds.
+* **Algorithm Benchmarking**: Conducted rigorous comparative analysis between Deep Learning (CNNs) and Classical ML (Support Vector Machines, Random Forests) utilizing flattened pixel vectors.
+
+## 📊 Model Performance & Benchmarks
+
+| Model | Task Type | Accuracy | Inference Time (ms) | Key Strength |
+| :--- | :--- | :--- | :--- | :--- |
+| **Convolutional Autoencoder** | Unsupervised Anomaly Detection | **96.77%** | 424.22 ms | Zero-Shot Detection |
+| **MobileNetV2 (CNN)** | Supervised Multi-Class | **93.89%** | 2108.24 ms | High Spatial Awareness |
+| **Random Forest** | Supervised Multi-Class | 73.33% | **6.96 ms** | Ultra-Low Latency |
+| **Support Vector Machine** | Supervised Multi-Class | 71.11% | 24.70 ms | Baseline Simplicity |
+
+*Note: MobileNetV2 provides the highest classification accuracy, while Random Forest offers the lowest latency for strict real-time constraints.*
 
 ## 📂 Repository Structure
-├── dl-project-ind.ipynb # Main Kaggle notebook
-├── README.md # Project documentation
-
----
-
-## 🧠 Concepts Covered
-- Data preprocessing and analysis
-- Feature handling
-- Deep Learning model construction
-- Model training and evaluation
-- Performance metrics and observations
-
----
-
-## 🛠️ Tools & Technologies
-- Python
-- NumPy
-- Pandas
-- Deep Learning framework (TensorFlow / Keras / PyTorch as used in notebook)
-- Kaggle Notebook environment
-
----
-
-## 📊 Dataset
-The dataset used in this project is provided via **Kaggle**.
-
-📎 **Dataset source:**  
-> Available through the Kaggle notebook input section  
-(Refer to the notebook for the exact dataset link and details)
-
-⚠️ **Note:**  
-The dataset is **not uploaded to this GitHub repository** to comply with Kaggle’s data usage policies.
-
----
-
-## ▶️ How to Run the Notebook
-### Option 1: Run on Kaggle (Recommended)
-1. Upload `dl-project-ind.ipynb` to Kaggle
-2. Attach the required dataset
-3. Run all cells
-
-### Option 2: Run Locally
-```bash
-pip install numpy pandas matplotlib scikit-learn tensorflow
-jupyter notebook
-
-Then open:
-
-dl-project-ind.ipynb
-
-
-📈 Results
-
-The notebook includes training results, evaluation metrics, and observations.
-
-Model performance and conclusions are discussed within the notebook itself.
-
-🚀 Future Improvements
-
-Hyperparameter tuning
-
-Model optimization
-
-Cross-validation
-
-Deployment as a web application
-
-👤 Author
-
-Teja Karri
-
-If you find this project useful, feel free to ⭐ star the repository.
-
-📄 License
-
-This project is for educational and learning purposes.
+```text
+├── dl-project-ind.ipynb   # Main Kaggle notebook containing all pipelines
+├── README.md              # Project documentation
